@@ -10,21 +10,33 @@
   <link rel="stylesheet" type="text/css" href="./slick/slick.css">
   <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
   <style>
 body{
   margin: 0px;
   padding: 0px;
   font-family: 'Lato', sans-serif;
-  padding-top: 40px;
+  padding-top: 0px;
+  background-image: url("image/bg.png");
+  background-repeat: no-repeat, repeat;
+}
+.img-bg{
+ 
+  position: fixed;
+  z-index: 0;
+  width: 100%
+  background-repeat: no-repeat, repeat;
+  padding-top: 500px;
 }
 .container{
   width: 100%;
 }
 .container-pic{
   max-width: 100%;
+  box-shadow: 0px 2px 20px 2px #000000;
 }
 header {
-    background: #DEDEDE;
+    background: #fff;
     height: 80px;
     position: fixed;
     top: 0;
@@ -32,8 +44,15 @@ header {
     width: 100%;
     z-index: 2;
 }
+.contact
+{
+  font-size: 12px;
+  float: right;
+  color: #002378;
+  font-family: 'Lato', sans-serif;
+}
 .nav-up{
-  top: -80px;
+  top: -85px;
 }
 .carousel-inner img {
       width: 100%;
@@ -79,10 +98,10 @@ nav{
   left: 0;
   width: 100%;
   background: #fff;
-  box-shadow: 0 3px 10px -2px rgba(0,0,0,.1);
-  border: 1px solid rgba(0,0,0,.1);
   z-index: 2;
-    font-family: 'Lato', sans-serif;
+  font-family: 'Lato', sans-serif;
+  box-shadow: 1px 1px 5px #999999;
+  padding-bottom: 5px;
 }
   nav ul{
     list-style: none;
@@ -181,7 +200,7 @@ nav{
     }
 
     .slick-active {
-      opacity: .5;
+      opacity: 1;
     }
 
     .slick-current {
@@ -198,8 +217,8 @@ nav{
     {
        font-size: 18px;
        padding: 10px 10px 10px 10px;
-       color: #050040;
-       background: #dbdbdb;
+       color: #fff;
+       background: #002378;
        margin-bottom: 20px;
     }
     .oneday
@@ -208,7 +227,7 @@ nav{
       width: 60%;
       text-align: center;
     }
-    .row
+    .row-news
     {
       padding-top: 30px;
     }
@@ -220,15 +239,37 @@ nav{
       font-family: 'Lato', sans-serif;
       text-align: center;
     }
-
+    footer{
+      margin-top: 40px;
+      background-color: #002378;
+      font-family: 'Lato', sans-serif;
+    }
+    .foot-text
+    {
+      padding: 15px 15px 15px 15px;
+      color: #fff;
+    }
 
 </style> 
 </head>
 <body> 
   <header>
     <div>
-    <div>
-      <img src = "image/LOGO.png" style="width: 160px" > 
+    <div class="row">
+      <div class="col-sm-6">
+        <img src = "image/LOGO.png" style="width: 160px" > 
+      </div>
+      <div class="col-sm-6">
+        <div class="contact" align="right">
+          PhuketNext Co., Ltd.<br>
+          <img src="image/call.svg" style="width: 20px"> 084 628 8108
+          <img src="image/email.svg" style="width: 20px"> phuketnext@gmail.com
+          <img src="image/line.svg" style="width: 20px">
+          <img src="image/whatsapp.svg" style="width: 20px">
+          <img src="image/wechat.svg" style="width: 20px">
+        </div>
+      </div>
+      
     </div>
     <nav role='navigation' align="center">
       <ul>
@@ -241,37 +282,43 @@ nav{
         </li>
         <li><a href="#">Clients</a></li>
         <li><a href="#">Contact Us</a></li>
+        <li><a href="#">more</a>
+          <ul>
+              <li><a href="">1</a></li>
+              <li><a href="">2</a></li>
+              <li><a href="">3</a></li>
+            </ul>
+        </li>
       </ul>
     </nav>
     </div>
   </header>
-
-<section class="container-pic">
-<div id="demo" class="carousel slide" data-ride="carousel" style="z-index: 0; width: 100%;">
-  <ul class="carousel-indicators">
-    <li data-target="#demo" data-slide-to="0" class="active"></li>
-    <li data-target="#demo" data-slide-to="1"></li>
-    <li data-target="#demo" data-slide-to="2"></li>
-  </ul>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="image/work51.jpg" alt="Los Angeles" width="1100" height="500">
+  <section class="container-pic">
+    <div id="demo" class="carousel slide" data-ride="carousel" style="z-index: 1; width: 100%;">
+      <ul class="carousel-indicators">
+        <li data-target="#demo" data-slide-to="0" class="active"></li>
+        <li data-target="#demo" data-slide-to="1"></li>
+        <li data-target="#demo" data-slide-to="2"></li>
+      </ul>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="image/work51.jpg" alt="Los Angeles" width="1100" height="500">
+        </div>
+        <div class="carousel-item">
+          <img src="image/work52.jpg" alt="Chicago" width="1100" height="500">
+        </div>
+        <div class="carousel-item">
+          <img src="image/work53.jpg" alt="New York" width="1100" height="500">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
     </div>
-    <div class="carousel-item">
-      <img src="image/work52.jpg" alt="Chicago" width="1100" height="500">
-    </div>
-    <div class="carousel-item">
-      <img src="image/work53.jpg" alt="New York" width="1100" height="500">
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#demo" data-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </a>
-  <a class="carousel-control-next" href="#demo" data-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </a>
-</div>
-</section>
+  </section>
 <div class="headslid">
   POPULAR TOUR
 </div>
@@ -380,7 +427,8 @@ nav{
     End New-->
     <!-- start facebook -->
     <div style="width: 25%; float:right;">
-     <div class="fb-page" data-href="https://www.facebook.com/krabiandamantourandtransfers/" data-tabs="timeline" data-width="220" data-height="350" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/krabiandamantourandtransfers/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/krabiandamantourandtransfers/">Krabi Andaman Tour and Transfers</a></blockquote>
+      <div class="fb-page" data-href="https://www.facebook.com/krabiandamantourandtransfers/" data-tabs="timeline" data-width="220" data-height="350" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+        <blockquote cite="https://www.facebook.com/krabiandamantourandtransfers/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/krabiandamantourandtransfers/">Krabi Andaman Tour and Transfers</a></blockquote>
      </div>
     </div>
     <!-- end facebook -->
@@ -399,228 +447,239 @@ We guarantee all our guests will have a great experience using our tour and tran
 Not sure where to go on your time in Thailand? Not sure what to do while you are here? Get in touch now and let us take away your stress and worries and help you plan your time and get the most out of your holiday in Thailand.
 
 We love to help and we thrive on seeing happy holiday makers.
-  </div>
-</section>
-<section>
-<div align="center" >
-  <div class="oneday">
-    <div class="headhot">
-      One Day Trip Excursion
     </div>
-    <div class="headhot-b">
-    By Speed Boat
+  </section>
+  <section>
+    <div align="center" >
+      <div class="oneday">
+        <div class="headhot">
+          One Day Trip Excursion
+        </div>
+        <div class="headhot-b">
+        By Speed Boat
+        </div>
+        <div class="row-news">
+          <div class="row">
+            <div class = "col-sm-6">
+              <img src = "image/work51.jpg" style="width: 100%" > 
+              <div class="grid-item_news" align="center">
+                <div class="head_news" >
+                  1) ONE DAY ROK ISLANDS TOUR
+                </div>
+                <div class="table-info-oneday" style="padding-bottom: 25px">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>PACKAGES DETAIL</th>
+                        <th>TIME</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Pick up from hotel</td>
+                        <td>8.30 am</td>
+                      </tr>
+                      <tr>
+                        <td>Departs from the Pier</td>
+                        <td>9.00 am</td>
+                      </tr>
+                      <tr>
+                        <td>Arrive at “Koh Rok"</td>
+                        <td>9.50 - 10.00 am</td>
+                      </tr>
+                      <tr>
+                        <td>Departs from “Koh Rok”</td>
+                        <td>15.00 am</td>
+                      </tr>
+                      <tr>
+                        <td>Arrive back the hotel</td>
+                        <td>16.00 am</td>
+                      </tr>
+                      <thead>
+                      <tr>
+                        <th>ADULT</th>
+                        <th>CHILDREN</th>
+                      </tr>
+                    </thead>
+                      <tr>
+                        <td>1,500 Baht /person</td>
+                        <td>850 Baht /person</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <button type="button" class="btn btn-outline-secondary">Book Now</button>
+                </div>
+              </div>
+            </div>
+            <div class = "col-sm-6">
+              <img src = "image/work51.jpg" style="width: 100%" > 
+              <div class="grid-item_news" align="center">
+               <div class="head_news" >
+                  1) ONE DAY ROK ISLANDS TOUR
+                </div>
+                <div class="table-info-oneday" style="padding-bottom: 25px">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>PACKAGES DETAIL</th>
+                        <th>TIME</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Pick up from hotel</td>
+                        <td>8.30 am</td>
+                      </tr>
+                      <tr>
+                        <td>Departs from the Pier</td>
+                        <td>9.00 am</td>
+                      </tr>
+                      <tr>
+                        <td>Arrive at “Koh Rok"</td>
+                        <td>9.50 - 10.00 am</td>
+                      </tr>
+                      <tr>
+                        <td>Departs from “Koh Rok”</td>
+                        <td>15.00 am</td>
+                      </tr>
+                      <tr>
+                        <td>Arrive back the hotel</td>
+                        <td>16.00 am</td>
+                      </tr>
+                      <thead>
+                      <tr>
+                        <th>ADULT</th>
+                        <th>CHILDREN</th>
+                      </tr>
+                    </thead>
+                      <tr>
+                        <td>1,500 Baht /person</td>
+                        <td>850 Baht /person</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <button type="button" class="btn btn-outline-secondary">Book Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row-news">
+          <div class="row">
+            <div class = "col-sm-6">
+              <img src = "image/work51.jpg" style="width: 100%" > 
+              <div class="grid-item_news" align="center">
+                <div class="head_news" >
+                  1) ONE DAY ROK ISLANDS TOUR
+                </div>
+                <div class="table-info-oneday" style="padding-bottom: 25px">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>PACKAGES DETAIL</th>
+                        <th>TIME</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Pick up from hotel</td>
+                        <td>8.30 am</td>
+                      </tr>
+                      <tr>
+                        <td>Departs from the Pier</td>
+                        <td>9.00 am</td>
+                      </tr>
+                      <tr>
+                        <td>Arrive at “Koh Rok"</td>
+                        <td>9.50 - 10.00 am</td>
+                      </tr>
+                      <tr>
+                        <td>Departs from “Koh Rok”</td>
+                        <td>15.00 am</td>
+                      </tr>
+                      <tr>
+                        <td>Arrive back the hotel</td>
+                        <td>16.00 am</td>
+                      </tr>
+                      <thead>
+                      <tr>
+                        <th>ADULT</th>
+                        <th>CHILDREN</th>
+                      </tr>
+                    </thead>
+                      <tr>
+                        <td>1,500 Baht /person</td>
+                        <td>850 Baht /person</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <button type="button" class="btn btn-outline-secondary">Book Now</button>
+                </div>
+              </div>
+            </div>
+            
+            <div class = "col-sm-6">
+              <img src = "image/work51.jpg" style="width: 100%" > 
+              <div class="grid-item_news" align="center">
+                <div class="head_news" >
+                  1) ONE DAY ROK ISLANDS TOUR
+                </div>
+                <div class="table-info-oneday" style="padding-bottom: 25px">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>PACKAGES DETAIL</th>
+                        <th>TIME</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Pick up from hotel</td>
+                        <td>8.30 am</td>
+                      </tr>
+                      <tr>
+                        <td>Departs from the Pier</td>
+                        <td>9.00 am</td>
+                      </tr>
+                      <tr>
+                        <td>Arrive at “Koh Rok"</td>
+                        <td>9.50 - 10.00 am</td>
+                      </tr>
+                      <tr>
+                        <td>Departs from “Koh Rok”</td>
+                        <td>15.00 am</td>
+                      </tr>
+                      <tr>
+                        <td>Arrive back the hotel</td>
+                        <td>16.00 am</td>
+                      </tr>
+                      <thead>
+                      <tr>
+                        <th>ADULT</th>
+                        <th>CHILDREN</th>
+                      </tr>
+                    </thead>
+                      <tr>
+                        <td>1,500 Baht /person</td>
+                        <td>850 Baht /person</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <button type="button" class="btn btn-outline-secondary">Book Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="row">
-      <div class = "col-sm-6">
-        <img src = "image/work51.jpg" style="width: 100%" > 
-        <div class="grid-item_news" align="center">
-          <div class="head_news" >
-            1) ONE DAY ROK ISLANDS TOUR
-          </div>
-          <div class="table-info-oneday">
-            <table class="table">
-              <thead>
-                <tr>
-                  <th>PACKAGES DETAIL</th>
-                  <th>TIME</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Pick up from hotel</td>
-                  <td>8.30 am</td>
-                </tr>
-                <tr>
-                  <td>Departs from the Pier</td>
-                  <td>9.00 am</td>
-                </tr>
-                <tr>
-                  <td>Arrive at “Koh Rok"</td>
-                  <td>9.50 - 10.00 am</td>
-                </tr>
-                <tr>
-                  <td>Departs from “Koh Rok”</td>
-                  <td>15.00 am</td>
-                </tr>
-                <tr>
-                  <td>Arrive back the hotel</td>
-                  <td>16.00 am</td>
-                </tr>
-                <thead>
-                <tr>
-                  <th>ADULT</th>
-                  <th>CHILDREN</th>
-                </tr>
-              </thead>
-                <tr>
-                  <td>1,500 Baht /person</td>
-                  <td>850 Baht /person</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-      <div class = "col-sm-6">
-        <img src = "image/work51.jpg" style="width: 100%" > 
-        <div class="grid-item_news" align="center">
-         <div class="head_news" >
-            1) ONE DAY ROK ISLANDS TOUR
-          </div>
-          <div class="table-info-oneday">
-            <table class="table">
-              <thead>
-                <tr>
-                  <th>PACKAGES DETAIL</th>
-                  <th>TIME</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Pick up from hotel</td>
-                  <td>8.30 am</td>
-                </tr>
-                <tr>
-                  <td>Departs from the Pier</td>
-                  <td>9.00 am</td>
-                </tr>
-                <tr>
-                  <td>Arrive at “Koh Rok"</td>
-                  <td>9.50 - 10.00 am</td>
-                </tr>
-                <tr>
-                  <td>Departs from “Koh Rok”</td>
-                  <td>15.00 am</td>
-                </tr>
-                <tr>
-                  <td>Arrive back the hotel</td>
-                  <td>16.00 am</td>
-                </tr>
-                <thead>
-                <tr>
-                  <th>ADULT</th>
-                  <th>CHILDREN</th>
-                </tr>
-              </thead>
-                <tr>
-                  <td>1,500 Baht /person</td>
-                  <td>850 Baht /person</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        </div>
-      </div>
-      <div class="row">
-      <div class = "col-sm-6">
-        <img src = "image/work51.jpg" style="width: 100%" > 
-        <div class="grid-item_news" align="center">
-          <div class="head_news" >
-            1) ONE DAY ROK ISLANDS TOUR
-          </div>
-          <div class="table-info-oneday">
-            <table class="table">
-              <thead>
-                <tr>
-                  <th>PACKAGES DETAIL</th>
-                  <th>TIME</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Pick up from hotel</td>
-                  <td>8.30 am</td>
-                </tr>
-                <tr>
-                  <td>Departs from the Pier</td>
-                  <td>9.00 am</td>
-                </tr>
-                <tr>
-                  <td>Arrive at “Koh Rok"</td>
-                  <td>9.50 - 10.00 am</td>
-                </tr>
-                <tr>
-                  <td>Departs from “Koh Rok”</td>
-                  <td>15.00 am</td>
-                </tr>
-                <tr>
-                  <td>Arrive back the hotel</td>
-                  <td>16.00 am</td>
-                </tr>
-                <thead>
-                <tr>
-                  <th>ADULT</th>
-                  <th>CHILDREN</th>
-                </tr>
-              </thead>
-                <tr>
-                  <td>1,500 Baht /person</td>
-                  <td>850 Baht /person</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-      
-      <div class = "col-sm-6">
-        <img src = "image/work51.jpg" style="width: 100%" > 
-        <div class="grid-item_news" align="center">
-          <div class="head_news" >
-            1) ONE DAY ROK ISLANDS TOUR
-          </div>
-          <div class="table-info-oneday">
-            <table class="table">
-              <thead>
-                <tr>
-                  <th>PACKAGES DETAIL</th>
-                  <th>TIME</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Pick up from hotel</td>
-                  <td>8.30 am</td>
-                </tr>
-                <tr>
-                  <td>Departs from the Pier</td>
-                  <td>9.00 am</td>
-                </tr>
-                <tr>
-                  <td>Arrive at “Koh Rok"</td>
-                  <td>9.50 - 10.00 am</td>
-                </tr>
-                <tr>
-                  <td>Departs from “Koh Rok”</td>
-                  <td>15.00 am</td>
-                </tr>
-                <tr>
-                  <td>Arrive back the hotel</td>
-                  <td>16.00 am</td>
-                </tr>
-                <thead>
-                <tr>
-                  <th>ADULT</th>
-                  <th>CHILDREN</th>
-                </tr>
-              </thead>
-                <tr>
-                  <td>1,500 Baht /person</td>
-                  <td>850 Baht /person</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 <footer>
-    This is your footer.
-</footer>
+    <div class="foot-text" align="center">
 
+        @Phuket Next
+    </div>
+</footer>
 <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
 <script src="./slick/slick.min.js" type="text/javascript" charset="utf-8"></script>
 
@@ -701,7 +760,7 @@ $(function(){
           variableWidth: true,
       });
     });
-// Hide Header on on scroll down
+
 var didScroll;
 var lastScrollTop = 0;
 var delta = 11;
@@ -720,18 +779,11 @@ setInterval(function() {
 
 function hasScrolled() {
     var st = $(this).scrollTop();
-    
-    // Make sure they scroll more than delta
     if(Math.abs(lastScrollTop - st) <= delta)
         return;
-    
-    // If they scrolled down and are past the navbar, add class .nav-up.
-    // This is necessary so you never see what is "behind" the navbar.
     if (st > lastScrollTop && st > navbarHeight){
-        // Scroll Down
         $('header').removeClass('nav-down').addClass('nav-up');
     } else {
-        // Scroll Up
         if(st + $(window).height() < $(document).height()) {
             $('header').removeClass('nav-up').addClass('nav-down');
         }
